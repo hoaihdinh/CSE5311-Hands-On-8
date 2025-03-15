@@ -82,7 +82,7 @@ int main() {
     std::cout << "Input which ith order statistic you would like to see (by default will be 1st): ";
     std::cin >> ith_order;
 
-    if(ith_order > size) {
+    if(ith_order > size || ith_order < 1) {
         ith_order = 1;
     }
 
@@ -100,7 +100,7 @@ int main() {
         default:
             suffix = "th";
     }
-    if(ith_order % 100 <= 20) {
+    if(ith_order % 100 > 10 && ith_order % 100 <= 20) {
         suffix = "th";
     }
 
